@@ -9,7 +9,7 @@ of question so be nice and help. Austin seems
 to know what hes doing but I think that is just
 a front, but he is still smart. Justin is writing 
 this so hopfully he is smart but I know he is just 
-fronting fairly hard and wants to learn all of this.
+fronting fairly hard and wants to learn all of this shit.
 
 # ToDo
 1. figure out what to do
