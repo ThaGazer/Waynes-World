@@ -1,5 +1,15 @@
-*.xml
+spring-template.iml
 .idea
-.DS*
-out/
+.settings
+.project
+.classpath
+target
+spring-boot-template.iml
+.settings/
+.project
+.classpath
+src/main/resources/public/.DS_Store
+*.iml
+src/main/resources/public/layout
+*.endpoints.*
 
