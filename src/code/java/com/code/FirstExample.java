@@ -1,4 +1,4 @@
-//STEP 1. Import required packages
+package com.code;//STEP 1. Import required packages
 //package WaynesWorld;
 import java.sql.*;
 
@@ -70,4 +70,4 @@ public class FirstExample {
         }//end try
         System.out.println("Goodbye!");
     }//end main
-}//end FirstExample
+}//end com.code.FirstExample
