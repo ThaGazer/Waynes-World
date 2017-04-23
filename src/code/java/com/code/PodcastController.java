@@ -1,6 +1,6 @@
 package com.code;
 
-import com.credera.PodcastService.PodcastRequest;
+import com.code.PodcastService.PodcastRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.LinkedMultiValueMap;

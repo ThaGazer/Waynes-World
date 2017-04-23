@@ -1,4 +1,5 @@
 (function() {
+
   'use strict';
 
   angular
@@ -14,18 +15,18 @@
     };
 
     return exports;
-    
-    function checkCredentials(userEmail, userPassword) {
+
+    function checkCredentials() {//userEmail, userPassword) {
       // The login request
       var loginRequest = {
-        method: 'POST',
+        method: 'GET',
         url: '/loginAPI',
-        data: {
-          email: userEmail,
-          password: userPassword
-          //Tims email: timarterbury@gmail.com
-          //Tims password: lolZ254@
-        }
+        // data: {
+        //   email: userEmail,
+        //   password: userPassword
+        //   //Tims email: timarterbury@gmail.com
+        //   //Tims password: lolZ254@
+        // }
       }
       return $http(loginRequest);
       // ALTERNATIVE BELOW BUT ABOVE IS MORE READABLE

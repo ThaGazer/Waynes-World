@@ -1,7 +1,7 @@
 package com.code;
 
-import com.credera.BarService.BarRequest;
-import com.credera.BarService.BarResponse;
+import com.code.BarService.BarRequest;
+import com.code.BarService.BarResponse;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import org.springframework.beans.factory.annotation.Autowired;
