@@ -15,16 +15,14 @@ public class MainController {
 		return "map";
 	}
 
-	@RequestMapping("/mentors")
+	@RequestMapping("/members")
 	public @ResponseBody
-    MentorResponse[] mentors() {
-		MentorResponse[] mentors = {
-			new MentorResponse("Kelleigh Maroney", "kmaroney@credera.com", "Baylor University"),
-			new MentorResponse("John Lutteringer", "jlutteringer@credera.com", "Baylor University"),
-			new MentorResponse("Ali Shan Momin", "amomin@credera.com", "Texas A&M University"),
-			new MentorResponse("Graeme Scruggs", "gscruggs@credera.com", "Southern Methodist University"),
-			new MentorResponse("Trey Sedate", "tsedate@credera.com", "Baylor University"),
-			new MentorResponse("Christopher Blewett", "cblewett@credera.com", "Baylor University")
+	MemberResponse[] mentors() {
+		MemberResponse[] mentors = {
+			new MemberResponse("Austin Sparkman", "kmaroney@credera.com", "Baylor University"),
+			new MemberResponse("Justin Ritter", "Justin_Ritter@Baylor.edu", "Baylor University"),
+			new MemberResponse("Alicia MaGee ", "amomin@credera.com", "Baylor University"),
+
 		};
 		return mentors;
 	}

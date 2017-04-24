@@ -1,6 +1,3 @@
-/**
- * Created by Sneaky Teem on 10/14/2016.
- */
 (function() {
     'use strict';
 
@@ -13,17 +10,15 @@
     function searchService($http) {
 
         var exports = {
-            getPodcasts: getPodcasts
+            getWell: getWell
         };
 
         return exports;
 
-        function getPodcasts() {
-            
-            // The login request
+        function getWell() {
             var searchRequest = {
                 method: 'GET',
-                url: 'https://podsurfer-4.herokuapp.com/api/podcast/',
+                url: ''
             }
             
             return $http(searchRequest);

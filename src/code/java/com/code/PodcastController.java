@@ -25,7 +25,7 @@ public class PodcastController {
 	@ResponseBody
 	public String loginUserToCredera(@RequestBody PodcastRequest podcastRequest)
 	{
-		/* Only doing required podcast name and loginToken (authorization)
+		/* Only doing required well name and loginToken (authorization)
 		 * for now . . . add extra functionality later
 		 */
 		String authorization = podcastRequest.getAuthorization();
@@ -35,7 +35,7 @@ public class PodcastController {
 		System.out.println(name);
 		
     	// URL to Credera API - Login Existing User POST
-    	final String uri = "https://podsurfer-4.herokuapp.com/api/podcast/";
+    	final String uri = "https://podsurfer-4.herokuapp.com/api/well/";
     	
     	// Setup some parameter mapping for the API parameters
     	MultiValueMap<String, String> podcastParameters = new LinkedMultiValueMap<String, String>();

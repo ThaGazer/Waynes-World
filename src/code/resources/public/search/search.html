@@ -12,7 +12,7 @@
     <!-- EACH PODCAST WILL BE WRAPPED IN THIS LINK -->
     <!-- The Podcast Search Results -->
     <div>
-      <a class="podcastSearchObj" ng-repeat="podcast in search.podcasts | filter:searchText" ui-sref="podcast({ podcastId: '{{podcast._id}}' })">
+      <a  ng-repeat="podcast in search.podcasts | filter:searchText" ui-sref="podcast({ podcastId: '{{podcast._id}}' })">
         <h3>{{podcast.name}}</h3>
         <p>{{podcast.length}}</p>
         <ul class="podcastTags">
@@ -21,9 +21,5 @@
       </a>
     </div>
 
-    <!-- A Test for a basic podcast link -->
-    <!--<a ui-sref="podcast({ podcastId: '57f1df3bedc3f1110068367d' })">TEST podcast</a>-->
-    
-    
   </div>
 </div>

@@ -9,7 +9,7 @@
     function searchController(searchService) {
         
         var vm = this;
-        vm.message = 'Search For Podcasts';
+        vm.message = 'Search for Well';
         
         // Our array of podcasts
         vm.podcasts = [];
@@ -20,17 +20,17 @@
           var success = function(response) {
             
               vm.podcasts = response.data;
-              console.log('Retreived Podcasts');
+              console.log('Retreived well');
               console.log(vm.podcasts);
           };
         
           // Error Scenario
           var error = function(response) {
-              console.log('Failed to retreive podcasts');
+              console.log('Failed to retreive well');
               console.log(response.data);
           };
   
-          return searchService.getPodcasts().then(success, error); 
+          return searchService.getWell().then(success, error);
           
         };
     }

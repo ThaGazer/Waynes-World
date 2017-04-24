@@ -9,14 +9,11 @@
       var vm = this;
 
 
-      contactService.getMentors()
-      .then(function(response) {
-        vm.mentors = response.data;
+      contactService.getMembers().then(function(response) {
+        vm.members = response.data;
       }, function(reason) {
-        console.log('The call to /mentors failed');
-        vm.mentors = [];
+        console.log('The call to /members failed');
+        vm.members = [];
       });
-
-      
     }
 })();

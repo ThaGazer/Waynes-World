@@ -8,11 +8,11 @@
     function contactService($http) {
 
       var exports = {
-        getMentors: getMentors
+        getMembers: getMembers
       };
 
-      function getMentors() {
-        return $http.get('/mentors');
+      function getMembers() {
+        return $http.get('/members');
       }
 
       return exports;

@@ -10,12 +10,6 @@
       $urlRouterProvider.otherwise('/search');
 
       $stateProvider
-        .state('home', {
-          url: '/home',
-          templateUrl: 'home/home.html',
-          controller: 'homeController',
-          controllerAs: 'home'
-        })
         .state('about', {
           url: '/about',
           views : {
@@ -47,67 +41,12 @@
           controller: 'searchController',
           controllerAs: 'search'
         })
-        .state('popular', {
-          url: '/popular',
-          templateUrl: 'popular/popular.html',
-          controller: 'popularController',
-          controllerAs: 'popular'
-        })
-        .state('suggested', {
-          url: '/suggested',
-          templateUrl: 'suggested/suggested.html',
-          controller: 'suggestedController',
-          controllerAs: 'suggested'
-        })
-        .state('favorites', {
-          url: '/favorites',
-          templateUrl: 'favorites/favorites.html',
-          controller: 'favoritesController',
-          controllerAs: 'favorites'
-        })
-        .state('account', {
-          url: '/account',
-          templateUrl: 'account/account.html',
-          controller: 'accountController',
-          controllerAs: 'account'
-        })
-        .state('login', {
-          url: '/login',
-          templateUrl: 'login/login.html',
-          controller: 'loginController',
-          controllerAs: 'login'
-        })
-        .state('podcast', {
-          url: '/podcast/{podcastId}',
-          templateUrl: 'podcast/podcast.html',
-          controller: 'podcastController',
-          controllerAs: 'podcast'
-        })
-          .state('register', {
-            url: '/register',
-            templateUrl: 'register/register.html',
-            controller: 'registerController',
-            controllerAs: 'register'
-          })
-          .state('addpodcast', {
-            url: '/addpodcast',
-            templateUrl: 'addpodcast/addpodcast.html',
-            controller: 'addpodcastController',
-            controllerAs: 'addpodcast'
-          })
-          .state('logout', {
-            url: '/logout',
-            templateUrl: 'logout/logout.html',
-            controller: 'logoutController',
-            controllerAs: 'logout'
-          })
-          .state('editaccount', {
-            url: '/editaccount',
-            templateUrl: 'account/editaccount.html',
-            controller: 'editaccountController',
-            controllerAs: 'editaccount'
-          })
-        ;
+        .state('well', {
+          url: '/well/{podcastId}',
+          templateUrl: 'well/well.html',
+          controller: 'wellController',
+          controllerAs: 'well'
+        });
     };
 
 })();

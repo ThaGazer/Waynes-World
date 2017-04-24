@@ -1,11 +1,11 @@
 package com.code;
 
-public class MentorResponse {
+public class MemberResponse {
   String name;
   String email;
   String university;
 
-  public MentorResponse(String nm, String em, String univ) {
+  public MemberResponse(String nm, String em, String univ) {
     this.name = nm;
     this.email = em;
     this.university = univ;
