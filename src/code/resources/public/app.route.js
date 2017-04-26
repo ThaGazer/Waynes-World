@@ -41,6 +41,12 @@
           controller: 'searchController',
           controllerAs: 'search'
         })
+        .state('interactive_upload', {
+          url: '/interactive_upload',
+          templateUrl: 'interactive_upload/interactive_upload.html',
+          controller: 'interactive_uploadController',
+          controllerAs: 'interactive_upload'
+        })
         .state('well', {
           url: '/well/{podcastId}',
           templateUrl: 'well/well.html',

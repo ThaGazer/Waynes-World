@@ -1,0 +1,107 @@
+<div class="container">
+    <div class="row">
+        <h3 class="text-center"> Form upload </h3>
+    </div>
+
+    <hr class="row" />
+    <br/>
+    <div class="row">
+        <table class="table table-hover">
+            <tr>
+                <td><h4>WellID</h4></td>
+                <td><input ng-model="wellID" type="text" class="form-control" placeholder="id" value = "Input"></td>
+            </tr>
+            <tr>
+                <td><h4>usage</h4></td>
+                <td><input ng-model="usage" type="text" class="form-control" placeholder="usage" value="klk"></td>
+            </tr>
+            <tr>
+                <td><h4>aquafier code</h4></td>
+                <td><input ng-model="aquafier_code" type="text" class="form-control" placeholder="code" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>type code</h4></td>
+                <td><input ng-model="type_code" type="text" class="form-control" placeholder="type code" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>comment</h4></td>
+                <td><input ng-model="comment" type="text" class="form-control" placeholder="..." value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>top depth</h4></td>
+                <td><input ng-model="top_depth" type="text" class="form-control" placeholder="6,7,8" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>bottom depth</h4></td>
+                <td><input ng-model="bottom_depth" type="text" class="form-control" placeholder="1,2,3" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>depth</h4></td>
+                <td><input ng-model="depth" type="text" class="form-control" placeholder="5,5,5" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>water level elevation</h4></td>
+                <td><input ng-model="water_level_elevation" type="text" class="form-control" placeholder="3,4,5" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>land elevation</h4></td>
+                <td><input ng-model="land_elevation" type="text" class="form-control" placeholder="1,000?" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>diameter</h4></td>
+                <td><input ng-model="diameter" type="text" class="form-control" placeholder="1,2,3?" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>casing id</h4></td>
+                <td><input ng-model="casingID" type="text" class="form-control" placeholder="1,2,3" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>pump description</h4></td>
+                <td><input ng-model="pump_description" type="text" class="form-control" placeholder="pump is like what?" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>latitude</h4></td>
+                <td><input ng-model="latitude" type="text" class="form-control" placeholder="54.45" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>longitude</h4></td>
+                <td><input ng-model="longitude" type="text" class="form-control" placeholder="45.54" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>State</h4></td>
+                <td><input ng-model="state" type="text" class="form-control" placeholder="TX, MN?" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>Country</h4></td>
+                <td><input ng-model="country" type="text" class="form-control" placeholder="country" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>ownerID</h4></td>
+                <td><input ng-model="ownerID" type="text" class="form-control" placeholder="12345678" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>Owner's name</h4></td>
+                <td><input ng-model="owner_name" type="text" class="form-control" placeholder="owner_name" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>Owner type</h4></td>
+                <td><input ng-model="owner_type" type="text" class="form-control" placeholder="government, company, or person?" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>Transducer ID</h4></td>
+                <td><input ng-model="transID" type="text" class="form-control" placeholder="1234abcd" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>Transducer name</h4></td>
+                <td><input ng-model="trans_name" type="text" class="form-control" placeholder="Billy" value="Input"></td>
+            </tr>
+            <tr>
+                <td><h4>Transducer type</h4></td>
+                <td><input ng-model="trans_type" type="text" class="form-control" placeholder="transducer type" value="Input"></td>
+            </tr>
+            <tr>
+                <button ng-click="interactive_upload.uploadInfo()" type="button" class="btn btn-primary btn-lg btn-block">Upload</button>
+            </tr>
+        </table>
+    </div>
+</div>
