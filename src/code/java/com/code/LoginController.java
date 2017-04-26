@@ -1,17 +1,12 @@
 package com.code;
 
-import com.code.LoginService.LoginRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.client.RestTemplate;
+
 import java.sql.*;
-import java.util.HashMap;
 
 import static com.code.FirstExample.DB_URL;
 import static com.code.FirstExample.PASS;

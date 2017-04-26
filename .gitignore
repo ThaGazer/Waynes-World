@@ -10,4 +10,4 @@ src/code/resources/public/.DS_Store
 *.iml
 src/code/resources/public/layout
 *.endpoints.*
-
+extra/

@@ -7,39 +7,20 @@
     config.$inject = ['$stateProvider', '$urlRouterProvider'];
     function config($stateProvider, $urlRouterProvider) {
 
-      $urlRouterProvider.otherwise('/search');
+      $urlRouterProvider.otherwise('/about');
 
       $stateProvider
         .state('about', {
           url: '/about',
-          views : {
-            '': {
-              templateUrl: 'about/about.html',
-              controller: 'aboutController',
-              controllerAs: 'about'
-            },
-            'view1@about': {
-              templateUrl: 'about/views/about-view1.html',
-            },
-            'view2@about': {
-              templateUrl: 'about/views/about-view2.html',
-            },
-            'view3@about': {
-              templateUrl: 'about/views/about-view3.html',
-            },
-          }
+            templateUrl: 'about/about.html',
+            controller: 'aboutController',
+            controllerAs: 'about'
         })
         .state('contact', {
           url: '/contact',
           templateUrl: 'contact/contact.html',
           controller: 'contactController',
           controllerAs: 'contact'
-        })
-        .state('search', {
-          url: '/search',
-          templateUrl: 'search/search.html',
-          controller: 'searchController',
-          controllerAs: 'search'
         })
         .state('interactive_upload', {
           url: '/interactive_upload',
@@ -48,7 +29,7 @@
           controllerAs: 'interactive_upload'
         })
         .state('well', {
-          url: '/well/{podcastId}',
+          url: '/well',
           templateUrl: 'well/well.html',
           controller: 'wellController',
           controllerAs: 'well'

@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import com.code.well;
 
 import java.sql.*;
 
 @Controller
 public class Interactive_uploadController {
 
+<<<<<<< HEAD
     static final String DB_URL = "jdbc:mysql://mama.c95cjqkvfcem.us-east-1.rds.amazonaws.com:3306";
     static final String USER = "ritSpaGee";
     static final String PASS = "geeterman";
@@ -84,5 +84,16 @@ public class Interactive_uploadController {
         }
 
         return response;
+=======
+    @RequestMapping(value ="/updateDB")//, method = RequestMethod.POST)
+    public @ResponseBody
+    MemberResponse[] mentors() {
+        MemberResponse[] mentors = {
+                new MemberResponse("Austin Sparkman", "austin_sparkman@baylor.edu", "Baylor University"),
+                new MemberResponse("Justin Ritter", "Justin_Ritter@Baylor.edu", "Baylor University"),
+                new MemberResponse("Alicia MaGee ", "amomin@credera.com", "Baylor University"),
+        };
+        return mentors;
+>>>>>>> 2db9a04792e0cd9ce11cf07de9b6a19a4d704c0f
     }
 }
