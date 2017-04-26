@@ -5,21 +5,21 @@ package com.code;
  */
 public class owner {
 
-    String ownerID;
+    double ownerID;
     String type;
     String name;
 
-    public owner(String ownerID, String type, String name) {
+    public owner(double ownerID, String type, String name) {
         this.ownerID = ownerID;
         this.type = type;
         this.name = name;
     }
 
-    public String getOwnerID() {
+    public double getOwnerID() {
         return ownerID;
     }
 
-    public void setOwnerID(String ownerID) {
+    public void setOwnerID(double ownerID) {
         this.ownerID = ownerID;
     }
 

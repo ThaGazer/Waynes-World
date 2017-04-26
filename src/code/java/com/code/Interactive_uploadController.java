@@ -15,7 +15,6 @@ import java.sql.*;
 @Controller
 public class Interactive_uploadController {
 
-<<<<<<< HEAD
     static final String DB_URL = "jdbc:mysql://mama.c95cjqkvfcem.us-east-1.rds.amazonaws.com:3306";
     static final String USER = "ritSpaGee";
     static final String PASS = "geeterman";
@@ -34,8 +33,7 @@ public class Interactive_uploadController {
         //Testing to see if all have default values, ergo no valid data entered.
         if (we.getWellID() == 9.5 && ow.getOwnerID() == 9.5 && trans.getTransID() == "Input") {
             response = "failure";
-        }
-        else {
+        } else {
             Connection conn = null;
             Statement stmt = null;
             well wells = new well();
@@ -51,16 +49,31 @@ public class Interactive_uploadController {
                 //STEP 4: Execute a query
                 System.out.println("Creating statement...");
                 stmt = conn.createStatement();
-                String sql;
 
-                //only trans input present.
-                if(we.getWellID() == 9.5 && ow.getOwnerID() == 9.5) {
-                    sql = "INSERT ";
+                String sql = "";
+                //Well input is present
+                if(we.getWellID() != 9.5 && we.getDiameter() != -2) {
+                    sql = "INSERT INTO ritSpaGee.Well (wellID, ownerID, usagee, aquafier_code, type_code, top_depth, "+
+                            "bottom_depth, depth, bottom_elevation, water_level_elevation, land_elevation, diameter, " +
+                            "casingID, state, country, latitude, longitude) VALUES (" + we.getWellID() +',' + we.getOwnerID() +',' +
+                            we.getUsage() +',' + we.getAquafier_code() + ',' + we.getType_code() +',' + we.getTop_depth() +
+                            we.getBottom_depth() + ',' + we.getDepth() + ',' + we.getBottom_elevation() + ',' + we.getWater_level_elevation() +
+                            we.getLand_elevation() + ',' + we.getDiameter() + ',' + we.getCasingID() + ',' + we.getState() +
+                            ',' + we.getCountry() + ',' + we.getLatitude() + ',' + we.getLongitude() + ");";
+                    stmt.executeUpdate(sql);
                 }
-                    sql = "INSERT * FROM ritSpaGee.Well";
-                stmt.executeUpdate(sql);
-
-
+                //trans input present.
+                if (trans.getTransID() != "1234abcd") {
+                    sql = "INSERT INTO ritSpaGee.Transducer (transID, wellID, type, name) VALUES (" + trans.getTransID()
+                            +',' + trans.getWellID() + ',' + trans.getType() + ',' + trans.getName() + ");" ;
+                    stmt.executeUpdate(sql);
+                }
+                //Wwner input present
+                if(ow.getOwnerID() != 9.5) {
+                    sql = "INSERT INTO ritSpaGee.Owner (ownerID, type, name) VALUES (" + ow.getOwnerID() + ',' + ow.getType()
+                            + ',' + ow.getName() +");";
+                    stmt.executeUpdate(sql);
+                }
             } catch (SQLException se) {
                 //Handle errors for JDBC
                 se.printStackTrace();
@@ -84,16 +97,5 @@ public class Interactive_uploadController {
         }
 
         return response;
-=======
-    @RequestMapping(value ="/updateDB")//, method = RequestMethod.POST)
-    public @ResponseBody
-    MemberResponse[] mentors() {
-        MemberResponse[] mentors = {
-                new MemberResponse("Austin Sparkman", "austin_sparkman@baylor.edu", "Baylor University"),
-                new MemberResponse("Justin Ritter", "Justin_Ritter@Baylor.edu", "Baylor University"),
-                new MemberResponse("Alicia MaGee ", "amomin@credera.com", "Baylor University"),
-        };
-        return mentors;
->>>>>>> 2db9a04792e0cd9ce11cf07de9b6a19a4d704c0f
     }
 }

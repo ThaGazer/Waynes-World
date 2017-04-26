@@ -4,14 +4,15 @@ package com.code;
  * Created by Sparky on 4/22/17.
  */
 public class well {
-	int wellID;
-	int ownerID;
+	double wellID;
+	double ownerID;
 	String usage;
 	String type_code;
 	String comment;
 	double top_depth;
 	double bottom_depth;
 	double depth;
+	double bottom_elevation;
 	double water_level_elevation;
 	double land_elevation;
 	double diameter;
@@ -23,7 +24,7 @@ public class well {
 	String country;
 	String aquafier_code;
 
-	public well(int wellID, int ownerID, String usage, String type_code, String comment, double top_depth, double bottom_depth, double depth, double water_level_elevation, double land_elevation, double diameter, String casingID, String pump_description, double latitude, double longitude, String state, String country, String aquafier_code) {
+	public well(double wellID, double ownerID, String usage, String type_code, double bottom_elevation, String comment, double top_depth, double bottom_depth, double depth, double water_level_elevation, double land_elevation, double diameter, String casingID, String pump_description, double latitude, double longitude, String state, String country, String aquafier_code) {
 		this.wellID = wellID;
 		this.ownerID = ownerID;
 		this.usage = usage;
@@ -32,6 +33,7 @@ public class well {
 		this.top_depth = top_depth;
 		this.bottom_depth = bottom_depth;
 		this.depth = depth;
+		this.bottom_elevation = bottom_elevation;
 		this.water_level_elevation = water_level_elevation;
 		this.land_elevation = land_elevation;
 		this.diameter = diameter;
@@ -48,18 +50,26 @@ public class well {
 
 	}
 
-	public well(int id, String st, String cn, String aquaCode) {
+	public well(double id, String st, String cn, String aquaCode) {
 		this.wellID = id;
 		this.state = st;
 		this.country = cn;
 		this.aquafier_code = aquaCode;
 	}
 
-	public void setWellID(int id) {
+	public double getBottom_elevation() {
+		return bottom_elevation;
+	}
+
+	public void setBottom_elevation(double bottom_elevation) {
+		this.bottom_elevation = bottom_elevation;
+	}
+
+	public void setWellID(double id) {
 		this.wellID = id;
 	}
 
-	public int getWellID() {return this.wellID;}
+	public double getWellID() {return this.wellID;}
 
 	public void setCountry(String cn) {this.country = cn;}
 
@@ -83,9 +93,9 @@ public class well {
 		return this.aquafier_code;
 	}
 
-	public int getOwnerID() {return ownerID; }
+	public double getOwnerID() {return ownerID; }
 
-	public void setOwnerID(int ownerID) { this.ownerID = ownerID; }
+	public void setOwnerID(double ownerID) { this.ownerID = ownerID; }
 
 	public String getUsage() {
 		return usage;

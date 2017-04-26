@@ -11,11 +11,22 @@
     function interactive_uploadController($http, interactive_uploadService) {
         var vm = this;
 
-        interactive_uploadService.uploadInfo().then(function(response) {
-            vm.members = response.data;
-        }, function(reason) {
-            console.log('The call to /updateDB failed');
-            vm.members = [];
-        });
+
+        vm.uploader = function uploader() {
+            var success = function(response) {
+                // Grab the well object
+                vm.wellObj = response.data;
+                console.log('Got well id num: ' + wellId);
+                //console.log(vm.name + ' ' + vm.release + ' ' + vm.description);
+            };
+
+            // Error Scenario
+            var error = function(response) {
+                document.getElementById("well-fail").innerHTML = 'Failed to get well';
+                console.log(response.data);
+            };
+
+            interactive_uploadService.uploadInfo().then(success, error);
+        }
     }
 })();
