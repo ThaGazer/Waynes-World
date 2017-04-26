@@ -8,7 +8,6 @@
     function contactController($http, contactService) {
       var vm = this;
 
-
       contactService.getMembers().then(function(response) {
         vm.members = response.data;
       }, function(reason) {
