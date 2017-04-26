@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <h3 class="text-center"> 2017 Group Members </h3>
+    </div>
+
+    <hr class="row" />
+    <br/>
+    <div class="row">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td><h4>Name</h4></td>
+                    <td><h4>E-mail</h4></td>
+                    <td><h4>University</h4></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="members in contact.members">
+                    <td>{{members.name}}</td>
+                    <td>{{members.email}}</td>
+                    <td>{{members.university}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

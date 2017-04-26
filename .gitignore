@@ -1,0 +1,13 @@
+spring-template.iml
+.idea
+.settings
+.project
+.classpath
+target
+spring-boot-template.iml
+.settings/
+src/code/resources/public/.DS_Store
+*.iml
+src/code/resources/public/layout
+*.endpoints.*
+extra/
