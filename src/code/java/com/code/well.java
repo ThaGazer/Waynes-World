@@ -83,13 +83,9 @@ public class well {
 		return this.aquafier_code;
 	}
 
-	public int getOwnerID() {
-		return ownerID;
-	}
+	public int getOwnerID() {return ownerID; }
 
-	public void setOwnerID(int ownerID) {
-		this.ownerID = ownerID;
-	}
+	public void setOwnerID(int ownerID) { this.ownerID = ownerID; }
 
 	public String getUsage() {
 		return usage;
